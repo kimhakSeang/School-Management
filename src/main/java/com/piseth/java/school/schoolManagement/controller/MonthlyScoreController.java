@@ -34,10 +34,10 @@ public class MonthlyScoreController {
 	@PostMapping
 	public ResponseEntity<?> addMonthlyScore(@RequestBody MonthlyScoreDTO monthlyScoreDTO) {
 		MonthlyScore monthlyScore = monthlyScoreMapper.toEntity(monthlyScoreDTO);
-		System.out.println(">>>>>>>>>>>>>>>>>>"+monthlyScore.toString());
 		monthlyScoreService.addMonthlyScore(monthlyScore);
 		return ResponseEntity.ok().build();
 	}
+	
 	@GetMapping("/getMonthlyScore")
 	public ResponseEntity<?> getMonthlyScore(@RequestParam Map<String, String> params) {
 		List<MonthlyScore> monthlyScores = monthlyScoreService.getMonthlyScore(params,null);
