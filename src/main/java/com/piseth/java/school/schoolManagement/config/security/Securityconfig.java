@@ -1,4 +1,4 @@
-package com.piseth.java.school.schoolManagement.config.security.login;
+package com.piseth.java.school.schoolManagement.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,30 +21,33 @@ public class Securityconfig extends WebSecurityConfigurerAdapter{
 	private PasswordEncoder  passwordEncoder;
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http
+		http.csrf().disable()
 		.authorizeHttpRequests()
-		.antMatchers(HttpMethod.GET,"/monthlyScores/*").hasAnyRole("STUDENT", "TEACHER")
-		.antMatchers(HttpMethod.POST ,"/monthlyScores/*").hasAnyRole("TEACHER")
-		.antMatchers(HttpMethod.PUT ,"/monthlyScores/*").hasAnyRole("TEACHER")
-		.antMatchers("/subjects/*").permitAll()
+		.antMatchers(HttpMethod.GET ,"/monthlyScores/*").hasAnyAuthority(Permission.MS_R.getDescript())  //.hasAnyRole("STUDENT", "TEACHER")
+		.antMatchers(HttpMethod.POST ,"/monthlyScores").hasAnyAuthority(Permission.MS_W.getDescript())   //.hasAnyRole("TEACHER")
+		.antMatchers(HttpMethod.PUT ,"/monthlyScores/*").hasAnyAuthority(Permission.MS_W.getDescript())  //.hasAnyRole("TEACHER")
 		.anyRequest()
 		.authenticated()
 		.and()
 	    .httpBasic();
 	}
+	
 	@Bean
 	@Override
 	protected UserDetailsService userDetailsService() {
+		
 		UserDetails Dara_S = User.builder()
 									.username("Dara")
 									.password(passwordEncoder.encode("dara123"))
-									.roles("STUDENT")
+									//.roles("STUDENT")
+									.authorities(Role.STUDENT.getAuthority())
 									.build();
 		
 		UserDetails Leo_T = User.builder()
 									.username("Leo")
 									.password(passwordEncoder.encode("leo123"))
-									.roles("TEACHER")
+									//.roles("TEACHER")
+									.authorities(Role.TEACHER.getAuthority())
 									.build();
 		
 		return new InMemoryUserDetailsManager(Dara_S, Leo_T);
