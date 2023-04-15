@@ -1,0 +1,102 @@
+[33mcommit f74d9fcea7d1d76bf47bfe01b115e393506962aa[m[33m ([m[1;36mHEAD -> [m[1;32mSpringSecurity[m[33m)[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Tue Apr 4 22:37:41 2023 +0700
+
+    :Security-Role-Authority
+
+[33mcommit 9595145a27c4a9f7d3aa311caceed5e33baa09d3[m[33m ([m[1;31morigin/SpringSecurity[m[33m)[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Sat Apr 1 18:18:24 2023 +0700
+
+    SecurityHasRole
+
+[33mcommit 10006e146e34422624fe8c74707582b90d0ab44f[m[33m ([m[1;32mliquibase-config[m[33m)[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Fri Feb 17 22:13:55 2023 +0700
+
+    liquibase
+
+[33mcommit aac3e258a62be08d1782111d136461c191658249[m[33m ([m[1;32mListScores_PR2_kimhak[m[33m)[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Thu Dec 29 15:51:07 2022 +0700
+
+    Revert "Revert "List Scores : Updated""
+    
+    This reverts commit 9f1bdf1296cb5b0476d43ec4d4a3f4c6cba64070.
+
+[33mcommit 9f1bdf1296cb5b0476d43ec4d4a3f4c6cba64070[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Thu Dec 29 14:41:14 2022 +0700
+
+    Revert "List Scores : Updated"
+    
+    This reverts commit c0dfce9dc5d0915ca91fb8e1ff2528fb43ac1689.
+
+[33mcommit c0dfce9dc5d0915ca91fb8e1ff2528fb43ac1689[m[33m ([m[1;32mkimhak_PR2[m[33m)[m
+Author: kimhakSeang <104565674+kimhakSeang@users.noreply.github.com>
+Date:   Thu Dec 29 14:32:19 2022 +0700
+
+    List Scores : Updated
+    
+    1. Change method name : "listScore".
+    2. Create new class : BadRequestException .
+    3. Use stream().collect(Collectors.toMap(.......)).
+    
+    Co-Authored-By: pisething <112937826+pisething@users.noreply.github.com>
+
+[33mcommit 6177ef6867a71da03a0041e60779669ffd38feeb[m
+Merge: 2726512 fc86098
+Author: sovannpiseth <sovannpiseth@users.noreply.github.com>
+Date:   Fri Dec 16 22:31:31 2022 +0700
+
+    Merge pull request #22 from pisething/add-sample-data
+    
+    Add sample data
+
+[33mcommit fc860984479be5d0e304b48f4b9a35866aee7fda[m
+Author: Piseth Ing <piseth.ing@allianz.com>
+Date:   Fri Dec 16 22:27:32 2022 +0700
+
+    add sample data
+
+[33mcommit 468a4e151ab13354a1ea1905d0caee02c66752fb[m
+Author: Piseth Ing <piseth.ing@allianz.com>
+Date:   Fri Dec 16 14:53:00 2022 +0700
+
+    add rank
+
+[33mcommit 27265126c3b930ba32dcf626680ebf98aef8f55b[m
+Merge: c31d1b5 078dc16
+Author: pisething <112937826+pisething@users.noreply.github.com>
+Date:   Sun Nov 6 21:25:48 2022 +0700
+
+    Merge pull request #17 from pisething/putting-score
+    
+    add score to student
+
+[33mcommit 078dc168464208fdd49cc284b644ed99aba3fc96[m
+Author: Piseth Ing <piseth.ing@allianz.com>
+Date:   Sun Nov 6 21:21:35 2022 +0700
+
+    add score to student
+
+[33mcommit c31d1b51857833732ec26bc497f862bb43ca7bb3[m
+Merge: c477e1e a7a5947
+Author: pisething <112937826+pisething@users.noreply.github.com>
+Date:   Tue Oct 25 16:46:28 2022 +0700
+
+    Merge pull request #11 from pisething/piseth_ing
+    
+    CRUD for students
+
+[33mcommit a7a594730a357c7edf60f370aa2ff0ff7c559545[m
+Author: Piseth Ing <piseth.ing@allianz.com>
+Date:   Tue Oct 25 16:43:04 2022 +0700
+
+    CRUD for students
+
+[33mcommit c477e1ee06f0d9cd8d24199194fb470d216c936f[m
+Author: Piseth Ing <piseth.ing@allianz.com>
+Date:   Mon Oct 3 10:47:10 2022 +0700
+
+    first commit

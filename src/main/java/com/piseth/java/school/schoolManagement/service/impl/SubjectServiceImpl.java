@@ -20,7 +20,7 @@ public class SubjectServiceImpl implements SubjectService {
 	@Override
 	public Subject getById(Long id) {
 		return subjectRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("subject", id));
+				.orElseThrow(() -> new ResourceNotFoundException("ID: "+id));
 	}
 
 	@Override

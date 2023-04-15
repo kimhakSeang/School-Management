@@ -8,6 +8,6 @@ public class MonthlyScoreDTO {
 	private Long studentId;
 	private Long subjectId;
 	private Double score;
-	private Short year;
-	private Short month;
+	private Integer year;
+	private Integer month;
 }

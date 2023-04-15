@@ -43,16 +43,16 @@ public class MonthlyScoreServiceImpl implements MonthlyScoreService{
 		
 		MonthlyScoreFilter filter = new MonthlyScoreFilter();
 		if(params.containsKey(GRADE)) {
-			filter.setGrade(NumberUtils.parseNumber(params.get(GRADE), Short.class));
+			filter.setGrade(NumberUtils.parseNumber(params.get(GRADE), Integer.class));
 		}
 		if(params.containsKey(CLASS_NAME)) {
 			filter.setClassName(params.get(CLASS_NAME));
 		}
 		if(params.containsKey(YEAR)) {
-			filter.setYear(NumberUtils.parseNumber(params.get(YEAR), Short.class));
+			filter.setYear(NumberUtils.parseNumber(params.get(YEAR), Integer.class));
 		}
 		if(params.containsKey(MONTH)) {
-			filter.setMonth(NumberUtils.parseNumber(params.get(MONTH), Short.class));
+			filter.setMonth(NumberUtils.parseNumber(params.get(MONTH), Integer.class));
 		}
 		MonthlyScoreSpec spec = monthlyScoreSpec != null ? monthlyScoreSpec: new MonthlyScoreSpec(filter);
 		return monthlyScoreRepository.findAll(spec);
@@ -121,11 +121,11 @@ public class MonthlyScoreServiceImpl implements MonthlyScoreService{
 		}
 		if (params.containsKey(YEAR)) {
 			validationFieldBlank(params,YEAR);
-			monthlyScoreFilter.setYear(Short.parseShort(params.get(YEAR)));
+			monthlyScoreFilter.setYear(Integer.parseInt(params.get(YEAR)));
 		}
 		if (params.containsKey(MONTH)) {
 			validationFieldBlank(params,MONTH);
-			monthlyScoreFilter.setMonth(Short.parseShort(params.get(MONTH)));
+			monthlyScoreFilter.setMonth(Integer.parseInt(params.get(MONTH)));
 		}
 		MonthlyScoreSpec monthlyScoreSpec = spec != null ? spec: new MonthlyScoreSpec(monthlyScoreFilter);
 		return toMapScores(monthlyScoreRepository.findAll(monthlyScoreSpec));

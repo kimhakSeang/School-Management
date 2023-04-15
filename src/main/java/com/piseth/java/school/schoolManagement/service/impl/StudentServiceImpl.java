@@ -29,7 +29,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student getById(Long id) {
-		return studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("student", id));
+		return studentRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("ID= "+id));
 	}
 
 	@Override

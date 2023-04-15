@@ -41,9 +41,9 @@ public class MonthlyScore {
 	private Double score;
 	
 	@Column(name = "year")
-	private Short year;
+	private Integer year;
 	
 	@Column(name = "month")
-	private Short month;
+	private Integer month;
 
 }

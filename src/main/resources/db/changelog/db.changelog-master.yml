@@ -7,3 +7,5 @@ databaseChangeLog:
     - file: db/changelog/003_add_column_date_auditing.yml
   - include: 
     - file: db/changelog/004_add_auto_increment_id.yml
+  - include: 
+    - file: db/changelog/005_add_auto_increment_userlogin_id.yml

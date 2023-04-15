@@ -7,6 +7,6 @@ public class StudentDTO {
 	private Long id;
 	private String name;
 	private String gender;
-	private Short grade;
+	private Integer grade;
 	private String className;
 }
